@@ -1,0 +1,62 @@
+<div class="hero">
+    
+    <i class="fa fa-chevron-left icons" (click)="backClicked()" aria-hidden="true"></i>
+    <div class="avatar">
+        <img src="{{ artista.images | image }}" 
+        alt="avatar" >
+    </div>
+    
+    <div class="info-head">
+        <div class="nombre">
+            {{ artista.name }}
+        </div>
+        
+        <div class="tags">
+            <span class="badge badge-pill badge-info" *ngFor="let genero of artista.genres"> {{ genero }} </span>
+        </div>
+    </div>
+</div>
+
+
+<div class="body-profile">
+   <table class="table thead-dark">
+        <thead>
+            <tr>
+                <td> Portada  </td>
+                <td> Album </td>
+                <td> artistas </td>
+                <td> Canción </td>
+                <td> Reproducir </td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let top of toptracks">
+                <td> 
+                    <img src="{{ top.album.images | image }}" 
+                         alt="{{ top.album.name }}" 
+                         width="50px"> 
+                </td>
+                <td>
+                    {{ top.album.name }}
+                </td>
+                <td>
+                    <span 
+                        class="badge badge-pill badge-success" 
+                        *ngFor="let artista of top.album.artists"> 
+                        {{ artista.name }}
+                    </span>
+                </td>
+                <td> {{ top.name }} </td>
+                <td>
+                    <iframe 
+                        [src]="top.uri | domseguro "
+                        width="300" 
+                        height="80"
+                        frameborder="0" 
+                        allowtransparency="true" 
+                        allow="encrypted-media"></iframe>
+                </td>
+            </tr>
+        </tbody>
+   </table>
+</div>

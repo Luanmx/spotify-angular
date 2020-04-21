@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+.hero{
+    position: relative;
+    height: 450px;
+    width: 100%;
+    top: -25px;
+    
+    background: url('https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');
+    background-clip: border-box;
+    background-position: center;
+    background-position: 30% 30%;
+    box-shadow: 0 .25rem .25rem rgba(0, 0, 0, 0.3), 0 0 1rem rgba(0, 0, 0, 0.2);
+
+    .avatar{
+        position: absolute;
+        border: 7px solid #ffffff;
+        width: 200px;
+        height: 200px;
+        top: 350px;
+        left: 50px;
+        border-radius: 5px;
+        box-shadow: 0 .25rem .25rem rgba(0, 0, 0, 0.3), 0 0 1rem rgba(0, 0, 0, 0.2);
+
+        img{
+            width: 100%;
+        }
+    }
+
+    .info-head{
+        position: absolute;
+        top: 350px;
+        left: 280px;
+        width: 400px;
+        .nombre {
+          color: #ffffff;
+          font-size: 1.5em;
+          font-family: 'Anton', sans-serif;
+        }
+    }
+
+    .icons{
+        position: relative;
+        color: white;
+        font-size: 2em;
+        top: 10px;
+        left: 10px;
+        cursor: pointer;
+    }
+    
+}
+
+.body-profile{
+    position: relative;
+    top: 130px;
+}

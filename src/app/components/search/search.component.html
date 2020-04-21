@@ -1,0 +1,15 @@
+<div class="row">
+    <div class="col">
+      <input #buscador type="text" (keyup)="buscar( buscador.value )" class="form-control" placeholder="Buscar artista ...">
+    </div>
+</div>
+
+<br>
+
+<div class="row" *ngIf="artistas.length > 0">
+  <app-card  [canciones]="artistas"></app-card>
+</div>
+
+<div class="row" *ngIf="artistas.length == 0">
+  <img class="img-search" src="/assets/img/twitch_listeng.png" alt="" srcset="">
+</div>
